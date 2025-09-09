@@ -108,3 +108,12 @@ document
         // Download Excel
         XLSX.writeFile(wb, `CKG-ROBOT-LOGS.xlsx`);
     });
+
+document.getElementById("clearDataBtn").addEventListener("click", async () => {
+    localStorage.removeItem(LOCAL_STORAGE.LOGS);
+    localStorage.removeItem(LOCAL_STORAGE.AKTIF_DATA);
+
+    setTimeout(() => {
+        window.location.reload();
+    }, 1500);
+});

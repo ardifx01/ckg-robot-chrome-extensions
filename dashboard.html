@@ -106,6 +106,63 @@
         <button id="downloadExcelBtn" class="btn btn-success w-100 mb-2">
             Download File Excel
         </button>
+        <div class="w-100 text-end">
+            <button
+                class="btn btn-danger btn-sm mb-2"
+                data-bs-toggle="modal"
+                data-bs-target="#clearModal"
+            >
+                Hapus Data
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="clearModal"
+            tabindex="-1"
+            aria-labelledby="clearModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="clearModalLabel">
+                            Hapus Data Logs?
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        Anda yakin ingin menghapus data logs dan memulai robot
+                        dari awal?
+                        <br />
+                        Data yang sudah dihapus tidak dapat dikembalikan,
+                        pastikan Anda sudah mendownload File Excelnya!
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Batal
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            id="clearDataBtn"
+                        >
+                            Bersihkan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <hr />
         <pre id="output" class="bg-light p-2 rounded small"></pre>
